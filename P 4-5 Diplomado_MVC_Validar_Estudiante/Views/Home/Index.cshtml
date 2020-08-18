@@ -1,0 +1,50 @@
+﻿@model P_4_5_Diplomado_MVC_Validar_Estudiante.Models.Estudiante
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @Html.ValidationSummary()
+        @using (Html.BeginForm())
+        {
+            <p>
+                Ingrece Nombres:
+                @Html.EditorFor(model => model.Nombres)
+            </p>
+            <p>
+                Ingrece Apellidos:
+                @Html.EditorFor(model => model.Apellidos)
+            </p>
+            <p>
+                Ingrece Edad (entre 14 y 65):
+                @Html.EditorFor(model => model.Edad)
+            </p>
+            <p>
+                Ingrece Email:
+                @Html.EditorFor(model => model.Email)
+            </p>
+            <p>
+                Ingrece género:
+                @Html.EditorFor(model => model.Genero)
+            </p>
+            <p>
+                Ingrece Estado Civil:
+                @Html.EditorFor(model => model.EstadoCivil)
+            </p>
+            <p>
+                <input type="submit" value="Confirmar" />
+            </p>
+        }
+    </div>
+</body>
+</html>
+
